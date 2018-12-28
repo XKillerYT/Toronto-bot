@@ -15,7 +15,7 @@ client.on('message', message => {
      
       let args = message.content.split(" ").slice(1);
      
-      if (command == "kick") {
+            if(message.content.startsWith(prefix + "kick")) {
                    if(!message.channel.guild) return;
              
       if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("You Don't Have KICK_MEMBERS Permission").then(msg => msg.delete(5000));
@@ -63,7 +63,7 @@ client.on('message', message => {
         let args = message.content.split(" ");
         let command = args[0];
     
-        if(command === prefix + 'ban') {
+            if(message.content.startsWith(prefix + "ban")) {
           if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply('انت لا تملك الصلاحيات اللازمة').then(msg => {
             msg.delete(3500);
             message.delete(3500);
@@ -127,7 +127,7 @@ client.on('message', message => {
     
     client.on('message', message => {
     
-      if(command === prefix + 'mc') {
+            if(message.content.startsWith(prefix + "mc")) {
                             if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
     
     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -138,7 +138,7 @@ client.on('message', message => {
                    message.reply("تم تقفيل الشات ✅ ")
                });
                  }
-                 if(command === prefix + 'unmc') {
+            if(message.content.startsWith(prefix + "unmc")) {
         if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
     
     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -175,7 +175,7 @@ client.on('message', message => {
            console.log(`ON ${client.guilds.size} Servers '     Script By : Diamond Codes ' `);
          console.log(`----------------`);
        console.log(`Logged in as ${client.user.tag}!`);
-     client.user.setGame(`Loyalty Community | System`)//حقوق دايموند كودز
+     client.user.setGame(`Toronto Community | System`)//حقوق دايموند كودز
      client.user.setStatus("online")
      
      });
