@@ -295,7 +295,6 @@ client.on('message', message => {
         
          message.author.sendMessage(`
          **
-        ${m}
         [❖═════ Torento Commands ═══════❖]
         
         『-clear / لحذف الشات 』
