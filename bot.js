@@ -9,7 +9,7 @@ const prefix = "#"
 client.on('message', message => {
     ;
       if (message.author.kick) return;
-      if (!message.content.startsWith(prefix)) return;
+      if (!message.content.startsWithf(prefix)) return;
      
       let command = message.content.split(" ")[0];
       command = command.slice(prefix.length);
@@ -247,7 +247,7 @@ client.on('message', message => {
 
     client.on('message',async msg => {
         
-        if(msg.content.startsWith(p + "c-count")) {
+        if(msg.content.startsWith(prefix + "c-count")) {
         if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('❌ **لا تملك الصلاحيات**');
         if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('❌ **البوت لا يمتلك صلاحية**');
         msg.guild.createChannel(`يتم تحضير الروم :[]` , 'voice').then(time => {
