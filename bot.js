@@ -397,4 +397,10 @@ client.on("guildMemberAdd", async member => {
   }
 });
 
+client.on('message', message => {
+    if(messsage.content.startsWith(prefix + "inv")) {
+        message.reply("https://discordapp.com/oauth2/authorize?client_id=528268918360506394&permissions=2080374975&scope=bot")
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
