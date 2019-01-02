@@ -176,7 +176,7 @@ client.on('message', message => {
            console.log(`ON ${client.guilds.size} Servers '     Script By : Diamond Codes ' `);
          console.log(`----------------`);
        console.log(`Logged in as ${client.user.tag}!`);
-     client.user.setGame(`Toronto Community | System`)//حقوق دايموند كودز
+     client.user.setGame(`Toronto Bot | ${client.guilds.size}`)//حقوق دايموند كودز
      client.user.setStatus("online")
      
      });
