@@ -397,4 +397,14 @@ client.on("guildMemberAdd", async member => {
   }
 });
 
+client.on('message', message => {
+        if (message.content.toLowerCase() === prefix + "invite") {
+            if(!message.channel.guild) return;
+        let embed = new Discord.RichEmbed()
+        .setTitle(`:small_orange_diamond: Click Here To Invite | أضغط لدعوة البوت :small_orange_diamond: `)
+        .setURL(`https://discordapp.com/oauth2/authorize?client_id=528268918360506394&permissions=2080374975&scope=bot`)
+     message.channel.sendEmbed(embed);
+       }
+   });
+
 client.login(process.env.BOT_TOKEN);
