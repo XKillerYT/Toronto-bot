@@ -3,6 +3,7 @@ const fs = require('fs');
 const moment = require('moment');
 const client = new Discord.Client();
 const prefix = "#"
+const devs = ['461386341146558475','515833534523506699'];
 
 
 
