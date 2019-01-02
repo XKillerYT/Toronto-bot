@@ -407,4 +407,16 @@ client.on('message', message => {
        }
    });
 
+client.on('message', message => {
+            if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith(prefix + '1bc')){
+    if (!devs.includes(message.author.id)) return;
+    message.channel.sendMessage('** تم ارسال الرسالة **')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
+});
+
 client.login(process.env.BOT_TOKEN);
