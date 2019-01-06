@@ -312,6 +312,7 @@ client.on('message', message => {
         『#c-channel / لانشاء روم يكون بعدد اعضاء السيرفر 』
         『#new / لانشاء تيكت 』
         『#close / لاغلاق التيكت 』
+        『#cc + #createc / لانشاء الالوان 』
 
         
          **`);
@@ -417,6 +418,33 @@ if (message.content.startsWith(prefix + '1bc')){
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
+}
+});
+
+client.on('message', function(message) {
+    if(!message.channel.guild) return;
+if (message.content.startsWith(prefix + 'cc')){
+if(message.member.hasPermission('MANAGE_ROLES')) {
+setInterval(function(){})
+message.channel.send('سيتم عمل الالوان انتظر ...')
+}else{
+message.channel.send('** يجب ان يكون لديك برمشن ،"MANAGE_ROLES" ❌**')
+}
+}
+});
+//Narox
+client.on('message', message=>{
+if (message.content.startsWith(prefix + 'createc')){
+if(!message.channel.guild) return;
+if (message.member.hasPermission('MANAGE_ROLES')){
+  setInterval(function(){})
+    let count = 0;
+    let ecount = 0;
+for(let x = 1; x < 100; x++){//اذا تريد ان تقوم بزياده الالوان قم بتعديل رقم 100
+message.guild.createRole({name:x,
+color: 'RANDOM'})
+}
+}
 }
 });
 
